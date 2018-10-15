@@ -12,8 +12,8 @@ function tablaMult(){
 
   });
 
-
 }
+
 function incrementaContador(){
 
   var contador = Number.parseInt($('#contador').val());
@@ -26,9 +26,27 @@ function incrementaContador(){
 
 }
 
+function creaTabla(){
+
+  var contador = Number.parseInt($('#contador').val());
+
+  for(var i = 0; i <= 10; i++){
+    var fila = $('<tr>');
+
+    var factor = $('<td>' + i + '</td>');
+    var valor = $('<td>' + i * contador  + '</td>');
+
+    fila.append(factor);
+    fila.append(valor);
+
+    $('#tabla-mult tbody').append(fila);
+
+  }
+}
+
 function loadPage(){
 
-  tablaMult();
+  creaTabla();
 
   $('#incrementa').on("click", function(){
 
