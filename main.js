@@ -12,4 +12,4 @@ function saluda(){
 }
 
 // $( document ).ready( afterLoad );
-$( window ).on("load", saluda);
+$( window ).on("click", saluda);
