@@ -12,4 +12,6 @@ function saluda(){
 }
 
 // $( document ).ready( afterLoad );
-$( window ).on("click", saluda);
+
+$( window ).click(saluda);
+$( window ).click();
