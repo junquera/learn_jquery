@@ -1,5 +1,3 @@
-var incrementValue = 2;
-
 function tablaMult(){
 
   var contador = Number.parseInt($('#contador').val());
@@ -16,13 +14,16 @@ function tablaMult(){
 
 function incrementaContador(){
 
-  var contador = Number.parseInt($('#contador').val());
-  $('#contador').val(contador + incrementValue);
+  $.get('increment.json', function( data ){
+    var incrementValue = data.value;
 
-  var contadiv = Number.parseInt($('#contadiv').text());
-  $('#contadiv').text(contador + incrementValue);
+    var contador = Number.parseInt($('#contador').val());
+    $('#contador').val(contador + incrementValue);
 
-  tablaMult();
+    tablaMult();
+
+  });
+
 
 }
 
@@ -49,9 +50,6 @@ function loadPage(){
   creaTabla();
 
   $('#incrementa').on("click", function(){
-
-    console.log("#contador value (val): ", $('#contador').val());
-    console.log("#contadiv value (text): ", $('#contadiv').text());
 
     incrementaContador();
 
