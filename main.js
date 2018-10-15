@@ -1,4 +1,4 @@
-function afterLoad(){
+function cargaImg(){
 
   var img = $('<img>');
   img.attr("src", "https://api.jquery.com/jquery-wp-content/themes/jquery/content/donate.png");
@@ -13,5 +13,4 @@ function saluda(){
 
 // $( document ).ready( afterLoad );
 
-$( window ).click(saluda);
-$( window ).click();
+$( window ).click(cargaImg);
