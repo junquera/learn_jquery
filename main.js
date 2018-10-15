@@ -1,16 +1,10 @@
-function cargaImg(){
 
-  var img = $('<img>');
-  img.attr("src", "https://api.jquery.com/jquery-wp-content/themes/jquery/content/donate.png");
+function loadPage(){
 
-  $('body').append(img);
+  $('#incrementa').on("click", function(){
+    alert("Incrementa");
+  });
 
 }
 
-function saluda(){
-  alert("Hola");
-}
-
-// $( document ).ready( afterLoad );
-
-$( window ).click(cargaImg);
+$( document ).ready(loadPage);
