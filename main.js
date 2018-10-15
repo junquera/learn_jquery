@@ -7,4 +7,9 @@ function afterLoad(){
 
 }
 
-$( document ).ready( afterLoad );
+function saluda(){
+  alert("Hola");
+}
+
+// $( document ).ready( afterLoad );
+$( window ).on("load", saluda);
