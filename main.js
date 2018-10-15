@@ -12,6 +12,19 @@ function tablaMult(){
 
 }
 
+
+function fakeAPI(){
+  var url = "https://jsonplaceholder.typicode.com/todos/";
+  var contador = Number.parseInt($('#contador').val());
+
+  $.get(url + contador, function( data ){
+    $('.user .id').text(data.id);
+    $('.user .title').text(data.title);
+    $('.user .completed').attr("checked", data.completed);
+  });
+}
+
+
 function incrementaContador(){
 
   $.get('increment.json', function( data ){
@@ -48,10 +61,12 @@ function creaTabla(){
 function loadPage(){
 
   creaTabla();
+  fakeAPI();
 
   $('#incrementa').on("click", function(){
 
     incrementaContador();
+    fakeAPI();
 
   });
 
